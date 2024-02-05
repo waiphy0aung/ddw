@@ -1,29 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./style.css">
-    <title>Retail Camping Company</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Retail Camping Company</title>
 </head>
+
 <body>
- <header class="navigation-header">
+  <header class="navigation-header">
     <nav>
-        <div class="logo-container">
-            <a href="./index.html">RCC</a>
-        </div>
-        <div class="navigation-items" id="navigation-items">
-            <a href="">Home</a>
-            <a href="">Camping Equipment</a>
-            <a href="">Furniture</a>
-            <a href="">Reviews</a>
-        </div>
-        <div class="hamburger">
-            <span id="openHam">&#9776;</span>
-            <span id="closeHam">&#x2716;</span>
-        </div>
+      <div class="logo-container">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <a href="./index.html">RCC</a>
+      </div>
+      <div class="navigation-items" id="navigation-items">
+        <a href="" style="font-weight: bold;text-decoration: underline;">Home</a>
+        <a href="">Camping Equipment</a>
+        <a href="">Furniture</a>
+        <a href="">Reviews</a>
+      </div>
+      <div class="basket">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>0</span>
+      </div>
+      <div class="menu-bar">
+        <span id="openMen">&#9776;</span>
+        <span id="closeMen">&#x2716;</span>
+      </div>
     </nav>
-   </header>
+  </header>
+
+  <!-- Slideshow container -->
+  <section class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="images/slide/slide1.jpg" style="width:100%">
+      <div class="text" style="top: 20px;">
+        <h1>Explore the Great Outdoors</h1>
+        <h3>Discover top-quality camping equipment for your next adventure.</h3>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/slide/slide2.jpg" style="width:100%">
+      <div class="text" style="top: 50px;left: 0;text-align: start;">
+        <h1>Camping Tent</h1>
+        <h3>High-quality, spacious tent for your outdoor adventures. Sleeps up to 4 people.</h3>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+      <img src="images/slide/slide3.jpg" style="width:100%">
+      <div class="text" style="top: 50%;">
+        <h1>Special Discounts on Camping Gear</h1>
+        <h3>Limited-time offers on tents, cookware, and more. Don't miss out!</h3>
+      </div>
+
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </section>
+
+  <section class="about-us">
+    <h1 style="margin-bottom: 20px;">About Us</h1>
+    <p>Welcome to Retail Camping Company! We are passionate about providing high-quality camping equipment to outdoor
+      enthusiasts. Explore our website for the best deals on tents, furniture, cookware, and more. Happy camping!</p>
+  </section>
+
+  <section class="special-offers" style="text-align: center;">
+    <h2>Special Offers</h2>
+    <div id="cCarousel">
+      <div class="arrow" id="prev"><i class="fa-solid fa-chevron-left"></i></div>
+      <div class="arrow" id="next"><i class="fa-solid fa-chevron-right"></i></div>
+
+      <div id="carousel-vp">
+        <div id="cCarousel-inner">
+
+          <article class="cCarousel-item">
+            <img src="images/backpack/backpack1.jpg" alt="Moon">
+            <div class="infos">
+              <h3>Osprey - Renn 65</h3>
+              <button type="button">See</button>
+            </div>
+          </article>
+
+          <article class="cCarousel-item">
+            <img src="images/tent/tent1.jpg" alt="Moon">
+            <div class="infos">
+              <h3>NEMO - Mayfly OSMO 2P</h3>
+              <button type="button">See</button>
+            </div>
+          </article>
+
+          <article class="cCarousel-item">
+            <img src="images/cookware/cookware1.jpg" alt="Moon">
+            <div class="infos">
+              <h3>MSR - Reactor Cookware</h3>
+              <button type="button">See</button>
+            </div>
+          </article>
+
+          <article class="cCarousel-item">
+            <img src="images/tool/tool1.jpg" alt="Moon">
+            <div class="infos">
+              <h3>Astral - Throw Rope</h3>
+              <button type="button">See</button>
+            </div>
+          </article>
+
+          <article class="cCarousel-item">
+            <img src="images/furniture/furniture1.jpg" alt="Moon">
+            <div class="infos">
+              <h3>Helinox - Table One Hard Top</h3>
+              <button type="button">See</button>
+            </div>
+          </article>
+
+          <article class="cCarousel-item">
+            <img src="images/backpack/backpack2.jpg" alt="Moon">
+            <div class="infos">
+              <h3>Granite Gear - Virga3 55</h3>
+              <button type="button">See</button>
+            </div>
+          </article>
+
+          <article class="cCarousel-item">
+            <img src="images/tent/tent2.jpg" alt="Moon">
+            <div class="infos">
+              <h3>NEMO - Aurora 3P</h3>
+              <button type="button">See</button>
+            </div>
+          </article>
+
+          <article class="cCarousel-item">
+            <img src="images/cookware/cookware2.jpg" alt="Moon">
+            <div class="infos">
+              <h3>Snow Peak - Trek 1400 Titanium</h3>
+              <button type="button">See</button>
+            </div>
+          </article>
+
+          <article class="cCarousel-item">
+            <img src="images/tool/tool2.jpg" alt="Moon">
+            <div class="infos">
+              <h3>Adventure First Aid 1.0</h3>
+              <button type="button">See</button>
+            </div>
+          </article>
+
+          <article class="cCarousel-item">
+            <img src="images/furniture/furniture2.jpg" alt="Moon">
+            <div class="infos">
+              <h3>Eureka - Quickset Cot (Fall 2023)</h3>
+              <button type="button">See</button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+
 </body>
 <script src="./script.js"></script>
+
 </html>
