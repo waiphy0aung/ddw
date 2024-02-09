@@ -45,8 +45,8 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
-const prev = document.querySelector("#prev");
-const next = document.querySelector("#next");
+const prev = document.querySelector("#prevSpecial");
+const next = document.querySelector("#nextSpecial");
 
 let carouselVp = document.querySelector("#carousel-vp");
 
