@@ -45,63 +45,94 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
-const prev = document.querySelector("#prevSpecial");
-const next = document.querySelector("#nextSpecial");
+const prev = id => document.getElementById("prev-"+id);
+const next = id => document.getElementById("next-"+id);
 
-let carouselVp = document.querySelector("#carousel-vp");
+let carouselVp = id => document.getElementById("carousel-vp-"+id);
 
-let cCarouselInner = document.querySelector("#cCarousel-inner");
-let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width;
+let cCarouselInner = id => document.getElementById("cCarousel-inner-"+id);
+let carouselInnerWidth = id => cCarouselInner(id).getBoundingClientRect().width;
 
-let leftValue = 0;
+let specialLeftValue = 0;
+let featuredLeftValue = 0;
 
-const totalMovementSize =
+const totalMovementSize = id =>
   parseFloat(
-    document.querySelector(".cCarousel-item").getBoundingClientRect().width,
+    document.querySelector(".cCarousel-item-"+id).getBoundingClientRect().width,
     10
   ) +
   parseFloat(
-    window.getComputedStyle(cCarouselInner).getPropertyValue("gap"),
+    window.getComputedStyle(cCarouselInner(id)).getPropertyValue("gap"),
     10
   );
 
-prev.addEventListener("click", () => {
-  if (!leftValue == 0) {
-    leftValue -= -totalMovementSize;
-    cCarouselInner.style.left = leftValue + "px";
-  }
-});
-
-next.addEventListener("click", () => {
-  const carouselVpWidth = carouselVp.getBoundingClientRect().width;
-  if (carouselInnerWidth - Math.abs(leftValue) > carouselVpWidth) {
-    leftValue -= totalMovementSize;
-    cCarouselInner.style.left = leftValue + "px";
-  }
-});
-
-const mediaQuery510 = window.matchMedia("(max-width: 510px)");
-const mediaQuery770 = window.matchMedia("(max-width: 770px)");
-
-mediaQuery510.addEventListener("change", mediaManagement);
-mediaQuery770.addEventListener("change", mediaManagement);
-
-let oldViewportWidth = window.innerWidth;
-
-function mediaManagement() {
-  const newViewportWidth = window.innerWidth;
-
-  if (leftValue <= -totalMovementSize && oldViewportWidth < newViewportWidth) {
-    leftValue += totalMovementSize;
-    cCarouselInner.style.left = leftValue + "px";
-    oldViewportWidth = newViewportWidth;
-  } else if (
-    leftValue <= -totalMovementSize &&
-    oldViewportWidth > newViewportWidth
-  ) {
-    leftValue -= totalMovementSize;
-    cCarouselInner.style.left = leftValue + "px";
-    oldViewportWidth = newViewportWidth;
+function prevClick(id) {
+  if (id === "special") {
+    if (specialLeftValue !== 0) {
+      specialLeftValue -= -totalMovementSize(id);
+      cCarouselInner(id).style.left = specialLeftValue + "px";
+    }
+  } else {
+    if (featuredLeftValue !== 0) {
+      featuredLeftValue -= -totalMovementSize(id);
+      cCarouselInner(id).style.left = featuredLeftValue + "px";
+    }
   }
 }
+
+function nextClick(id){
+  if (id === "special") {
+    const carouselVpWidth = carouselVp(id).getBoundingClientRect().width;
+    if (carouselInnerWidth(id) - Math.abs(specialLeftValue) > carouselVpWidth) {
+      specialLeftValue -= totalMovementSize(id);
+      cCarouselInner(id).style.left = specialLeftValue + "px";
+    }
+  } else {
+    const carouselVpWidth = carouselVp(id).getBoundingClientRect().width;
+    if (carouselInnerWidth(id) - Math.abs(featuredLeftValue) > carouselVpWidth) {
+      featuredLeftValue -= totalMovementSize(id);
+      cCarouselInner(id).style.left = featuredLeftValue + "px";
+    }
+  }
+}
+
+// prev.addEventListener("click", () => {
+//   if (!leftValue == 0) {
+//     leftValue -= -totalMovementSize;
+//     cCarouselInner.style.left = leftValue + "px";
+//   }
+// });
+
+// next.addEventListener("click", () => {
+//   const carouselVpWidth = carouselVp.getBoundingClientRect().width;
+//   if (carouselInnerWidth - Math.abs(leftValue) > carouselVpWidth) {
+//     leftValue -= totalMovementSize;
+//     cCarouselInner.style.left = leftValue + "px";
+//   }
+// });
+
+// const mediaQuery510 = window.matchMedia("(max-width: 510px)");
+// const mediaQuery770 = window.matchMedia("(max-width: 770px)");
+
+// mediaQuery510.addEventListener("change", mediaManagement);
+// mediaQuery770.addEventListener("change", mediaManagement);
+
+// let oldViewportWidth = window.innerWidth;
+
+// function mediaManagement() {
+//   const newViewportWidth = window.innerWidth;
+
+//   if (leftValue <= -totalMovementSize && oldViewportWidth < newViewportWidth) {
+//     leftValue += totalMovementSize;
+//     cCarouselInner.style.left = leftValue + "px";
+//     oldViewportWidth = newViewportWidth;
+//   } else if (
+//     leftValue <= -totalMovementSize &&
+//     oldViewportWidth > newViewportWidth
+//   ) {
+//     leftValue -= totalMovementSize;
+//     cCarouselInner.style.left = leftValue + "px";
+//     oldViewportWidth = newViewportWidth;
+//   }
+// }
 

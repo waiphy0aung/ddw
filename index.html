@@ -65,22 +65,24 @@
     <a class="next" onclick="plusSlides(1)">&#10095;</a>
   </section>
 
+  <!-- About Us -->
   <section class="about-us">
     <h1 style="margin-bottom: 20px;">About Us</h1>
     <p>Welcome to Retail Camping Company! We are passionate about providing high-quality camping equipment to outdoor
       enthusiasts. Explore our website for the best deals on tents, furniture, cookware, and more. Happy camping!</p>
   </section>
 
+  <!-- Special Offers -->
   <section class="special-offers" style="text-align: center;margin-bottom: 30px">
     <h2>Special Offers</h2>
     <div id="cCarousel">
-      <div class="arrow" id="prevSpecial"><i class="fa-solid fa-chevron-left"></i></div>
-      <div class="arrow" id="nextSpecial"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="arrow" id="prevSpecial" onclick="prevClick('special')"><i class="fa-solid fa-chevron-left"></i></div>
+      <div class="arrow" id="nextSpecial" onclick="nextClick('special')"><i class="fa-solid fa-chevron-right"></i></div>
 
-      <div id="carousel-vp">
-        <div id="cCarousel-inner">
+      <div id="carousel-vp-special">
+        <div id="cCarousel-inner-special">
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-special">
             <img src="images/backpack/backpack1.jpg" alt="Moon">
             <div class="infos">
               <h3>Osprey - Renn 65</h3>
@@ -88,7 +90,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-special">
             <img src="images/tent/tent1.jpg" alt="Moon">
             <div class="infos">
               <h3>NEMO - Mayfly OSMO 2P</h3>
@@ -96,7 +98,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-special">
             <img src="images/cookware/cookware1.jpg" alt="Moon">
             <div class="infos">
               <h3>MSR - Reactor Cookware</h3>
@@ -104,7 +106,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-special">
             <img src="images/tool/tool1.jpg" alt="Moon">
             <div class="infos">
               <h3>Astral - Throw Rope</h3>
@@ -112,7 +114,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-special">
             <img src="images/furniture/furniture1.jpg" alt="Moon">
             <div class="infos">
               <h3>Helinox - Table One Hard Top</h3>
@@ -120,7 +122,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-special">
             <img src="images/backpack/backpack2.jpg" alt="Moon">
             <div class="infos">
               <h3>Granite Gear - Virga3 55</h3>
@@ -128,7 +130,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-special">
             <img src="images/tent/tent2.jpg" alt="Moon">
             <div class="infos">
               <h3>NEMO - Aurora 3P</h3>
@@ -136,7 +138,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-special">
             <img src="images/cookware/cookware2.jpg" alt="Moon">
             <div class="infos">
               <h3>Snow Peak - Trek 1400 Titanium</h3>
@@ -144,7 +146,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-special">
             <img src="images/tool/tool2.jpg" alt="Moon">
             <div class="infos">
               <h3>Adventure First Aid 1.0</h3>
@@ -152,7 +154,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-special">
             <img src="images/furniture/furniture2.jpg" alt="Moon">
             <div class="infos">
               <h3>Eureka - Quickset Cot (Fall 2023)</h3>
@@ -164,16 +166,18 @@
       </div>
     </div>
   </section>
-  <section class="special-offers" style="text-align: center;">
+
+  <!-- Featured Products -->
+  <section class="featured-products" style="text-align: center;">
     <h2>Featured Products</h2>
     <div id="cCarousel">
-      <div class="arrow" id="prevFeatured"><i class="fa-solid fa-chevron-left"></i></div>
-      <div class="arrow" id="nextFeatured"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="arrow" id="prevFeatured" onclick="prevClick('featured')"><i class="fa-solid fa-chevron-left"></i></div>
+      <div class="arrow" id="nextFeatured" onclick="nextClick('featured')"><i class="fa-solid fa-chevron-right"></i></div>
 
-      <div id="carousel-vp">
-        <div id="cCarousel-inner">
+      <div id="carousel-vp-featured">
+        <div id="cCarousel-inner-featured">
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-featured">
             <img src="images/backpack/backpack3.jpg" alt="Moon">
             <div class="infos">
               <h3>Osprey - Renn 65</h3>
@@ -181,7 +185,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-featured">
             <img src="images/tent/tent3.jpg" alt="Moon">
             <div class="infos">
               <h3>NEMO - Mayfly OSMO 2P</h3>
@@ -189,7 +193,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-featured">
             <img src="images/cookware/cookware3.jpg" alt="Moon">
             <div class="infos">
               <h3>MSR - Reactor Cookware</h3>
@@ -197,7 +201,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-featured">
             <img src="images/tool/tool3.jpg" alt="Moon">
             <div class="infos">
               <h3>Astral - Throw Rope</h3>
@@ -205,7 +209,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-featured">
             <img src="images/furniture/furniture3.jpg" alt="Moon">
             <div class="infos">
               <h3>Helinox - Table One Hard Top</h3>
@@ -213,7 +217,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-featured">
             <img src="images/backpack/backpack4.jpg" alt="Moon">
             <div class="infos">
               <h3>Granite Gear - Virga3 55</h3>
@@ -221,7 +225,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-featured">
             <img src="images/tent/tent4.jpg" alt="Moon">
             <div class="infos">
               <h3>NEMO - Aurora 3P</h3>
@@ -229,7 +233,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-featured">
             <img src="images/cookware/cookware4.jpg" alt="Moon">
             <div class="infos">
               <h3>Snow Peak - Trek 1400 Titanium</h3>
@@ -237,7 +241,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-featured">
             <img src="images/tool/tool4.jpg" alt="Moon">
             <div class="infos">
               <h3>Adventure First Aid 1.0</h3>
@@ -245,7 +249,7 @@
             </div>
           </article>
 
-          <article class="cCarousel-item">
+          <article class="cCarousel-item-featured">
             <img src="images/furniture/furniture4.jpg" alt="Moon">
             <div class="infos">
               <h3>Eureka - Quickset Cot (Fall 2023)</h3>
@@ -257,7 +261,11 @@
       </div>
     </div>
   </section>
-  <br>
+
+  <!-- Footer -->
+  <section class="footer">
+  
+  </section>
 
 </body>
 <script src="./script.js"></script>

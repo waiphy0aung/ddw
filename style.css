@@ -186,15 +186,15 @@ nav {
   cursor: pointer;
 }
 
-#cCarousel #prev {
+#cCarousel #prevSpecial, #cCarousel #prevFeatured {
   left: 0px;
 }
 
-#cCarousel #next {
+#cCarousel #nextSpecial, #cCarousel #nextFeatured {
   right: 0px;
 }
 
-#carousel-vp {
+#carousel-vp-special, #carousel-vp-featured {
   width: 1000px;
   height: 400px;
   display: flex;
@@ -205,18 +205,18 @@ nav {
 }
 
 @media (max-width: 770px) {
-  #carousel-vp {
+  #carousel-vp-special, #carousel-vp-featured {
     width: 510px;
   }
 }
 
 @media (max-width: 510px) {
-  #carousel-vp {
+  #carousel-vp-special, #carousel-vp-featured {
     width: 250px;
   }
 }
 
-#cCarousel #cCarousel-inner {
+#cCarousel #cCarousel-inner-special, #cCarousel #cCarousel-inner-featured {
   display: flex;
   position: absolute;
   transition: 0.3s ease-in-out;
@@ -224,7 +224,7 @@ nav {
   left: 0px;
 }
 
-.cCarousel-item {
+.cCarousel-item-special, .cCarousel-item-featured {
   width: 250px;
   height: 365px;
   border: 2px solid white;
@@ -234,14 +234,14 @@ nav {
   flex-direction: column;
 }
 
-.cCarousel-item img {
+.cCarousel-item-special img, .cCarousel-item-featured img {
   width: 100%;
   object-fit: cover;
   min-height: 246px;
   color: white;
 }
 
-.cCarousel-item .infos {
+.cCarousel-item-special .infos, .cCarousel-item-featured .infos {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -251,7 +251,7 @@ nav {
   color: black;
 }
 
-.cCarousel-item .infos button {
+.cCarousel-item-special .infos button, .cCarousel-item-featured .infos button {
   background: #222;
   padding: 10px 30px;
   border-radius: 15px;
