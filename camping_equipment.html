@@ -1,28 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Navigation Bar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./camping_equipment.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Retail Camping Company</title>
 </head>
+
 <body>
- <header class="navigation-header">
+  <header class="navigation-header">
     <nav>
-        <div class="logo-container">
-            <a href="./index.html">Logo</a>
-        </div>
-        <div class="navigation-items" id="navigation-items">
-            <a href="">About</a>
-            <a href="">Projects</a>
-            <a href="">Contact Me</a>
-        </div>
-        <div class="hamburger">
-            <span id="openHam">&#9776;</span>
-            <span id="closeHam">&#x2716;</span>
-        </div>
+      <div class="logo-container">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <a href="./index.html">RCC</a>
+      </div>
+      <div class="navigation-items" id="navigation-items">
+        <a href="./index.html">Home</a>
+        <a href="" class="active">Camping Equipment</a>
+        <a href="">Furniture</a>
+        <a href="">Reviews</a>
+      </div>
+      <div class="basket">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>0</span>
+      </div>
+      <div class="menu-bar">
+        <span id="openMen">&#9776;</span>
+        <span id="closeMen">&#x2716;</span>
+      </div>
     </nav>
-   </header>
+  </header>
+
+  <div class="category-container">
+    <button class="category-btn" onclick="displayProducts('all')">All</button>
+    <button class="category-btn" onclick="displayProducts('tents')">Tents</button>
+    <button class="category-btn" onclick="displayProducts('backpacks')">Backpacks</button>
+    <button class="category-btn" onclick="displayProducts('cookware')">Cookware</button>
+    <button class="category-btn" onclick="displayProducts('tools')">Tools</button>
+    <!-- Add more category buttons as needed -->
+  </div>
+
+  <div class="container" id="product-container">
+    <!-- Product items will be dynamically added here using JavaScript -->
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h2 id="modal-title"></h2>
+      <img id="modal-image" alt="">
+      <p id="modal-description"></p>
+      <p id="modal-price"></p>
+    </div>
+  </div>
+  
+
+  <!-- Footer -->
+  <section id="footer">
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Retail Camping Company (RCC)</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+  </section>
+
 </body>
-<script src="script.js" />
+<script src="./script.js"></script>
+<script src="./camping_equipment.js"></script>
+
 </html>

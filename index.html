@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Retail Camping Company</title>
 </head>
@@ -17,8 +18,8 @@
         <a href="./index.html">RCC</a>
       </div>
       <div class="navigation-items" id="navigation-items">
-        <a href="" style="font-weight: bold;text-decoration: underline;">Home</a>
-        <a href="">Camping Equipment</a>
+        <a href="" class="active">Home</a>
+        <a href="./camping_equipment.html">Camping Equipment</a>
         <a href="">Furniture</a>
         <a href="">Reviews</a>
       </div>
@@ -81,87 +82,6 @@
 
       <div id="carousel-vp-special">
         <div id="cCarousel-inner-special">
-
-          <article class="cCarousel-item-special">
-            <img src="images/backpack/backpack1.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Osprey - Renn 65</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-special">
-            <img src="images/tent/tent1.jpg" alt="Moon">
-            <div class="infos">
-              <h3>NEMO - Mayfly OSMO 2P</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-special">
-            <img src="images/cookware/cookware1.jpg" alt="Moon">
-            <div class="infos">
-              <h3>MSR - Reactor Cookware</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-special">
-            <img src="images/tool/tool1.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Astral - Throw Rope</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-special">
-            <img src="images/furniture/furniture1.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Helinox - Table One Hard Top</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-special">
-            <img src="images/backpack/backpack2.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Granite Gear - Virga3 55</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-special">
-            <img src="images/tent/tent2.jpg" alt="Moon">
-            <div class="infos">
-              <h3>NEMO - Aurora 3P</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-special">
-            <img src="images/cookware/cookware2.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Snow Peak - Trek 1400 Titanium</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-special">
-            <img src="images/tool/tool2.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Adventure First Aid 1.0</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-special">
-            <img src="images/furniture/furniture2.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Eureka - Quickset Cot (Fall 2023)</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
         </div>
       </div>
     </div>
@@ -171,103 +91,35 @@
   <section class="featured-products" style="text-align: center;">
     <h2>Featured Products</h2>
     <div id="cCarousel">
-      <div class="arrow" id="prevFeatured" onclick="prevClick('featured')"><i class="fa-solid fa-chevron-left"></i></div>
-      <div class="arrow" id="nextFeatured" onclick="nextClick('featured')"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="arrow" id="prevFeatured" onclick="prevClick('featured')"><i class="fa-solid fa-chevron-left"></i>
+      </div>
+      <div class="arrow" id="nextFeatured" onclick="nextClick('featured')"><i class="fa-solid fa-chevron-right"></i>
+      </div>
 
       <div id="carousel-vp-featured">
         <div id="cCarousel-inner-featured">
-
-          <article class="cCarousel-item-featured">
-            <img src="images/backpack/backpack3.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Osprey - Renn 65</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-featured">
-            <img src="images/tent/tent3.jpg" alt="Moon">
-            <div class="infos">
-              <h3>NEMO - Mayfly OSMO 2P</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-featured">
-            <img src="images/cookware/cookware3.jpg" alt="Moon">
-            <div class="infos">
-              <h3>MSR - Reactor Cookware</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-featured">
-            <img src="images/tool/tool3.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Astral - Throw Rope</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-featured">
-            <img src="images/furniture/furniture3.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Helinox - Table One Hard Top</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-featured">
-            <img src="images/backpack/backpack4.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Granite Gear - Virga3 55</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-featured">
-            <img src="images/tent/tent4.jpg" alt="Moon">
-            <div class="infos">
-              <h3>NEMO - Aurora 3P</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-featured">
-            <img src="images/cookware/cookware4.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Snow Peak - Trek 1400 Titanium</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-featured">
-            <img src="images/tool/tool4.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Adventure First Aid 1.0</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
-          <article class="cCarousel-item-featured">
-            <img src="images/furniture/furniture4.jpg" alt="Moon">
-            <div class="infos">
-              <h3>Eureka - Quickset Cot (Fall 2023)</h3>
-              <button type="button">See</button>
-            </div>
-          </article>
-
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <section class="footer">
-  
+  <section id="footer">
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Retail Camping Company (RCC)</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
   </section>
 
 </body>
 <script src="./script.js"></script>
+<script src="./home.js"></script>
 
 </html>
