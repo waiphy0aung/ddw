@@ -20,8 +20,9 @@
       <div class="navigation-items" id="navigation-items">
         <a href="./index.html">Home</a>
         <a href="" class="active">Camping Equipment</a>
-        <a href="">Furniture</a>
-        <a href="">Reviews</a>
+        <a href="./furniture.html">Furniture</a>
+        <a href="./offers.html">Offers and Packages</a>
+        <a href="./reviews.html">Reviews</a>
       </div>
       <div class="basket">
         <i class="fa-solid fa-cart-shopping"></i>
@@ -49,9 +50,13 @@
 
   <div class="modal" id="modal">
     <div class="modal-content">
-      <span class="close-btn" onclick="closeModal()">&times;</span>
-      <h2 id="modal-title"></h2>
-      <img id="modal-image" alt="">
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+      </div>
+      <div class="modal-image-container">
+        <img id="modal-image" alt="">
+      </div>
       <p id="modal-description"></p>
       <p id="modal-price"></p>
     </div>

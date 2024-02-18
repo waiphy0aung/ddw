@@ -5,11 +5,15 @@ body {
   background-color: #f4f4f4;
 }
 
+h2 {
+  text-align: center;
+  margin: 15px 0px;
+}
+
 .category-container {
   display: flex;
-  justify-content: start;
-  overflow: scroll;
-  margin: 15px;
+  justify-content: center;
+  margin: 20px 0;
 }
 
 .category-btn {
@@ -173,18 +177,10 @@ h3 {
     max-width: none;
     margin: 10px;
   }
-
-  .category-container {
-    justify-content: center
-  }
 }
 
 @media only screen and (min-width: 900px) {
   .product {
     width: calc(33.33% - 20px);
-  }
-  
-  .category-container {
-    justify-content: center
   }
 }

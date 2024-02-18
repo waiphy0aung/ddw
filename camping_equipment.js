@@ -206,7 +206,6 @@ function displayProducts(category) {
           <button class="details-btn" onclick="openModal(${index},'${category}')">View Details</button>
         </div>
         <h3>${product.name}</h3>
-        <p>${product.description}</p>
         <p>$${product.price.toFixed(2)}</p>
         <button class="add-to-cart-btn" onclick="addToCart(${index})">Add to Cart</button>
       </div>

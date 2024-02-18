@@ -174,6 +174,22 @@ const specialProducts = [
       "Portable and durable folding shovel, perfect for digging fire pits, trenches, and other outdoor tasks.",
     category: "tools",
   },
+  {
+    name: "Portable Camping Chair",
+    price: 29.99,
+    image: "images/furniture/furniture1.jpg",
+    description:
+      "Comfortable and lightweight chair for relaxing around the campfire or at the campsite.",
+    category: "furniture",
+  },
+  {
+    name: "Foldable Camping Table",
+    price: 49.95,
+    image: "images/furniture/furniture2.jpg",
+    description:
+      "Compact and sturdy camping table for dining, cooking, or playing games at the campsite.",
+    category: "furniture",
+  },
 ];
 
 const featuredProducts = [
@@ -240,6 +256,22 @@ const featuredProducts = [
     description:
       "High-quality binoculars with a compact design, perfect for observing wildlife and scenic views during camping.",
     category: "tools",
+  },
+  {
+    name: "Hanging Hammock Chair",
+    price: 59.99,
+    image: "images/furniture/furniture5.jpg",
+    description:
+      "Relaxing and portable hanging hammock chair for lounging in nature.",
+    category: "furniture",
+  },
+  {
+    name: "Metolius Crash Pad Couch",
+    price: 129.95,
+    image: "images/furniture/furniture6.jpg",
+    description:
+      "the best way to turn any standard-size pad into a couch! Works great for the camp site, or as dirtbag furniture.",
+    category: "furniture",
   },
 ];
 

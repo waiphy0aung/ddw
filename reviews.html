@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./reviews.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Retail Camping Company</title>
+</head>
+
+<body>
+  <header class="navigation-header">
+    <nav>
+      <div class="logo-container">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <a href="./index.html">RCC</a>
+      </div>
+      <div class="navigation-items" id="navigation-items">
+        <a href="./index.html">Home</a>
+        <a href="./camping_equipment.html">Camping Equipment</a>
+        <a href="./furniture.html">Furniture</a>
+        <a href="./offers.html">Offers and Packages</a>
+        <a href="" class="active">Reviews</a>
+      </div>
+      <div class="basket">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>0</span>
+      </div>
+      <div class="menu-bar">
+        <span id="openMen">&#9776;</span>
+        <span id="closeMen">&#x2716;</span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="review-container">
+    <div class="review">
+      <img
+        src="images/user/user1.jpeg"
+        alt="User 1 Image" class="user-image">
+      <div class="review-content">
+        <h3>Great Quality Tent!</h3>
+        <span class="user-name">John Doe</span>
+        <div class="rating">
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9734;</span>
+        </div>
+        <p>The tent exceeded my expectations. It's durable, easy to set up, and kept us dry during a rainy camping trip.
+          Highly recommended!</p>
+      </div>
+    </div>
+
+    <div class="review">
+      <img
+        src="images/user/user2.jpeg"
+        alt="User 2 Image" class="user-image">
+      <div class="review-content">
+        <h3>Awesome Sleeping Bag</h3>
+        <span class="user-name">Jane Smith</span>
+        <div class="rating">
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+        </div>
+        <p>Best sleeping bag I've ever owned. It's warm, comfortable, and the compact design is perfect for backpacking.
+          I love it!</p>
+      </div>
+    </div>
+
+    <div class="review">
+      <img
+        src="images/user/user3.jpeg"
+        alt="User 3 Image" class="user-image">
+      <div class="review-content">
+        <h3>Efficient Camp Stove</h3>
+        <span class="user-name">Mark Johnson</span>
+        <div class="rating">
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+          <span class="star">&#9733;</span>
+        </div>
+        <p>This camp stove is fantastic! It heats up quickly, and the compact size makes it easy to carry. Perfect for
+          cooking in the great outdoors.</p>
+      </div>
+    </div>
+
+    <div class="add-review-form">
+      <h2>Add a Review</h2>
+      <form class="reviewForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="reviewTitle">Review Title:</label>
+        <input type="text" id="reviewTitle" name="reviewTitle" required>
+
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating" required>
+          <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+          <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
+          <option value="3">&#9733;&#9733;&#9733;</option>
+          <option value="2">&#9733;&#9733;</option>
+          <option value="1">&#9733;</option>
+        </select>
+
+        <label for="reviewContent">Review Content:</label>
+        <textarea id="reviewContent" name="reviewContent" rows="4" required></textarea>
+
+        <button type="submit">Submit Review</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <section id="footer">
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Retail Camping Company (RCC)</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+</body>
+<script src="./script.js"></script>
+
+</html>
