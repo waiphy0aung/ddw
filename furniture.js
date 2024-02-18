@@ -60,7 +60,7 @@ function displayProducts(category) {
 
   filteredProducts.forEach((product, index) => {
     const productHTML = `
-      <div class="product">
+      <div class="product" id="product-${index}">
         <div class="product-image-container">
           <img src="${product.image}" alt="${
       product.name
@@ -69,7 +69,7 @@ function displayProducts(category) {
         </div>
         <h3>${product.name}</h3>
         <p>$${product.price.toFixed(2)}</p>
-        <button class="add-to-cart-btn" onclick="addToCart(${index})">Add to Cart</button>
+        <button class="add-to-cart-btn" onclick="toggleCart(${index})">Add to Cart</button>
       </div>
     `;
 
@@ -112,6 +112,37 @@ window.onclick = function (event) {
 
 function addToCart(index) {
   alert(`Added ${products[index].name} to cart!`);
+}
+
+const basketCount = document.getElementById("basket-count");
+let cartCount = 0;
+const cart = {};
+
+function toggleCart(index) {
+  const productId = products[index].name;
+  const productElement = document.getElementById(
+    `product-${index}`
+  );
+  const addToCartBtn = productElement.querySelector(".add-to-cart-btn");
+
+  if (cart[productId]) {
+    cart[productId]--;
+    if (cart[productId] === 0) {
+      delete cart[productId];
+    }
+    addToCartBtn.textContent = "Add to Cart";
+    addToCartBtn.classList.remove("remove-from-cart");
+  } else {
+    cart[productId] = 1;
+    addToCartBtn.textContent = "Remove from Cart";
+    addToCartBtn.classList.add("remove-from-cart");
+  }
+
+  cartCount = Object.values(cart).reduce(
+    (total, quantity) => total + quantity,
+    0
+  );
+  basketCount.textContent = cartCount;
 }
 
 displayProducts("furniture");

@@ -73,6 +73,10 @@ label {
     color: #333;
 }
 
+.search-box input {
+  margin-bottom: 0px;
+}
+
 input, select, textarea {
     margin-bottom: 10px;
     padding: 8px;

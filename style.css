@@ -34,7 +34,7 @@ nav {
 .navigation-items {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 10px;
   z-index: 1000;
 }
 .navigation-items > a {
@@ -100,6 +100,12 @@ nav {
 .social-icons i {
     color: white;
     font-size: 1.5rem;
+}
+
+.search-box input {
+  border-radius: 20px;
+  padding: 10px 15px;
+  border: none;
 }
 
 @media screen and (max-width:768px) {

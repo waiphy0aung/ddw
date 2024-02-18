@@ -24,9 +24,12 @@
         <a href="./offers.html">Offers and Packages</a>
         <a href="./reviews.html">Reviews</a>
       </div>
+      <div class="search-box">
+        <input placeholder="Search something..." />
+      </div>
       <div class="basket">
         <i class="fa-solid fa-cart-shopping"></i>
-        <span>0</span>
+        <span id="basket-count">0</span>
       </div>
       <div class="menu-bar">
         <span id="openMen">&#9776;</span>
@@ -39,26 +42,26 @@
   <section class="slideshow-container">
 
     <div class="mySlides fade">
-      <img src="images/slide/slide1.jpg" style="width:100%">
-      <div class="text" style="top: 20px;">
+      <img src="images/slide/slide1.jpg">
+      <div class="text text-1">
         <h1>Explore the Great Outdoors</h1>
-        <h3>Discover top-quality camping equipment for your next adventure.</h3>
+        <p>Discover top-quality camping equipment for your next adventure.</p>
       </div>
     </div>
 
     <div class="mySlides fade">
-      <img src="images/slide/slide2.jpg" style="width:100%">
-      <div class="text" style="top: 50px;left: 0;text-align: start;">
+      <img src="images/slide/slide2.jpg">
+      <div class="text text-2">
         <h1>Camping Tent</h1>
-        <h3>High-quality, spacious tent for your outdoor adventures. Sleeps up to 4 people.</h3>
+        <p>High-quality, spacious tent for your outdoor adventures. Sleeps up to 4 people.</p>
       </div>
     </div>
 
     <div class="mySlides fade">
-      <img src="images/slide/slide3.jpg" style="width:100%">
-      <div class="text" style="top: 50%;">
+      <img src="images/slide/slide3.jpg">
+      <div class="text text-3">
         <h1>Special Discounts on Camping Gear</h1>
-        <h3>Limited-time offers on tents, cookware, and more. Don't miss out!</h3>
+        <p>Limited-time offers on tents, cookware, and more. Don't miss out!</p>
       </div>
 
     </div>
@@ -69,40 +72,38 @@
 
   <!-- About Us -->
   <section class="about-us">
-    <h1 style="margin-bottom: 20px;">About Us</h1>
+    <h1>About Us</h1>
     <p>Welcome to Retail Camping Company! We are passionate about providing high-quality camping equipment to outdoor
       enthusiasts. Explore our website for the best deals on tents, furniture, cookware, and more. Happy camping!</p>
   </section>
 
-  <!-- Special Offers -->
-  <section class="special-offers" style="text-align: center;margin-bottom: 30px">
-    <h2>Special Offers</h2>
-    <div id="cCarousel">
-      <div class="arrow" id="prevSpecial" onclick="prevClick('special')"><i class="fa-solid fa-chevron-left"></i></div>
-      <div class="arrow" id="nextSpecial" onclick="nextClick('special')"><i class="fa-solid fa-chevron-right"></i></div>
-
-      <div id="carousel-vp-special">
-        <div id="cCarousel-inner-special">
+  <section class="spacial-product">
+    <div class="carousel-title">Special Products</div>
+    <div class="container">
+      <button class="carousel-btn" onclick="prevSlide('special-carousel')">❮</button>
+      <div class="carousel-container">
+        <div class="carousel" id="special-carousel">
+          <!-- Special Products items will be dynamically added here using JavaScript -->
         </div>
       </div>
+      <button class="carousel-btn" onclick="nextSlide('special-carousel')">❯</button>
     </div>
   </section>
 
-  <!-- Featured Products -->
-  <section class="featured-products" style="text-align: center;">
-    <h2>Featured Products</h2>
-    <div id="cCarousel">
-      <div class="arrow" id="prevFeatured" onclick="prevClick('featured')"><i class="fa-solid fa-chevron-left"></i>
-      </div>
-      <div class="arrow" id="nextFeatured" onclick="nextClick('featured')"><i class="fa-solid fa-chevron-right"></i>
-      </div>
-
-      <div id="carousel-vp-featured">
-        <div id="cCarousel-inner-featured">
+  <section class="featured-product">
+    <div class="carousel-title">Featured Products</div>
+    <div class="container">
+      <button class="carousel-btn" onclick="prevSlide('featured-carousel')">❮</button>
+      <div class="carousel-container">
+        <div class="carousel" id="featured-carousel">
+          <!-- Featured Products items will be dynamically added here using JavaScript -->
         </div>
       </div>
+      <button class="carousel-btn" onclick="nextSlide('featured-carousel')">❯</button>
     </div>
   </section>
+
+
 
   <!-- Footer -->
   <section id="footer">

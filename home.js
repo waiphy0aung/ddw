@@ -28,87 +28,6 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
-const prev = (id) => document.getElementById("prev-" + id);
-const next = (id) => document.getElementById("next-" + id);
-
-let carouselVp = (id) => document.getElementById("carousel-vp-" + id);
-
-let cCarouselInner = (id) => document.getElementById("cCarousel-inner-" + id);
-let carouselInnerWidth = (id) =>
-  cCarouselInner(id).getBoundingClientRect().width;
-
-let specialLeftValue = 0;
-let featuredLeftValue = 0;
-
-const totalMovementSize = (id) =>
-  parseFloat(
-    document.querySelector(".cCarousel-item-" + id).getBoundingClientRect()
-      .width,
-    10
-  ) +
-  parseFloat(
-    window.getComputedStyle(cCarouselInner(id)).getPropertyValue("gap"),
-    10
-  );
-
-function prevClick(id) {
-  if (id === "special") {
-    if (specialLeftValue !== 0) {
-      specialLeftValue -= -totalMovementSize(id);
-      cCarouselInner(id).style.left = specialLeftValue + "px";
-    }
-  } else {
-    if (featuredLeftValue !== 0) {
-      featuredLeftValue -= -totalMovementSize(id);
-      cCarouselInner(id).style.left = featuredLeftValue + "px";
-    }
-  }
-}
-
-function nextClick(id) {
-  if (id === "special") {
-    const carouselVpWidth = carouselVp(id).getBoundingClientRect().width;
-    if (carouselInnerWidth(id) - Math.abs(specialLeftValue) > carouselVpWidth) {
-      specialLeftValue -= totalMovementSize(id);
-      cCarouselInner(id).style.left = specialLeftValue + "px";
-    }
-  } else {
-    const carouselVpWidth = carouselVp(id).getBoundingClientRect().width;
-    if (
-      carouselInnerWidth(id) - Math.abs(featuredLeftValue) >
-      carouselVpWidth
-    ) {
-      featuredLeftValue -= totalMovementSize(id);
-      cCarouselInner(id).style.left = featuredLeftValue + "px";
-    }
-  }
-}
-
-// const mediaQuery510 = window.matchMedia("(max-width: 510px)");
-// const mediaQuery770 = window.matchMedia("(max-width: 770px)");
-
-// mediaQuery510.addEventListener("change", mediaManagement);
-// mediaQuery770.addEventListener("change", mediaManagement);
-
-// let oldViewportWidth = window.innerWidth;
-
-// function mediaManagement() {
-//   const newViewportWidth = window.innerWidth;
-
-//   if (leftValue <= -totalMovementSize && oldViewportWidth < newViewportWidth) {
-//     leftValue += totalMovementSize;
-//     cCarouselInner.style.left = leftValue + "px";
-//     oldViewportWidth = newViewportWidth;
-//   } else if (
-//     leftValue <= -totalMovementSize &&
-//     oldViewportWidth > newViewportWidth
-//   ) {
-//     leftValue -= totalMovementSize;
-//     cCarouselInner.style.left = leftValue + "px";
-//     oldViewportWidth = newViewportWidth;
-//   }
-// }
-
 const specialProducts = [
   {
     name: "Venture Pro",
@@ -275,40 +194,104 @@ const featuredProducts = [
   },
 ];
 
-function displayProducts() {
-  const specialContainer = document.getElementById("cCarousel-inner-special");
-  const featuredContainer = document.getElementById("cCarousel-inner-featured");
+const basketCount = document.getElementById("basket-count");
+const specialCarousel = document.getElementById("special-carousel");
+const featuredCarousel = document.getElementById("featured-carousel");
+let specialIndex = 0;
+let featuredIndex = 0;
+let cartCount = 0;
+const cart = {};
+const itemsPerPage = 4;
 
-  specialContainer.innerHTML = "";
-  featuredContainer.innerHTML = "";
-
-  specialProducts.forEach((product) => {
+function initCarousel(carousel, products, startIndex) {
+  products.forEach((product, index) => {
     const productHTML = `
-      <article class="cCarousel-item-special">
-        <img src="${product.image}" alt="Moon">
-        <div class="infos">
-          <h3>${product.name}</h3>
-          <button type="button">See</button>
-        </div>
-      </article>
-    `;
-
-    specialContainer.innerHTML += productHTML;
+          <div class="product" id="${carousel.id}-product-${index}">
+            <div>
+              <img src="${product.image}" alt="${product.name}">
+              <h3>${product.name}</h3>
+              <p>${product.description}</p>
+              <p>$${product.price.toFixed(2)}</p>
+            </div>
+            <button class="add-to-cart" onclick="toggleCart('${
+              carousel.id
+            }', ${index})">Add to Cart</button>
+          </div>
+        `;
+    carousel.innerHTML += productHTML;
   });
 
-  featuredProducts.forEach((product) => {
-    const productHTML = `
-      <article class="cCarousel-item-featured">
-        <img src="${product.image}" alt="Moon">
-        <div class="infos">
-          <h3>${product.name}</h3>
-          <button type="button">See</button>
-        </div>
-      </article>
-    `;
-
-    featuredContainer.innerHTML += productHTML;
-  });
+  showSlide(carousel.id, startIndex);
 }
 
-displayProducts();
+function showSlide(carouselId, index) {
+  const slideWidth = document.querySelector(".product").offsetWidth + 20;
+  const carousel = document.getElementById(carouselId);
+  const newPosition = -index * slideWidth;
+  carousel.style.transform = `translateX(${newPosition}px)`;
+}
+
+function nextSlide(carouselId) {
+  if (carouselId === "special-carousel") {
+    specialIndex =specialIndex + 1;
+    if(specialIndex >= 7){
+      specialIndex = 0
+    }
+    showSlide(carouselId, specialIndex);
+  } else if (carouselId === "featured-carousel") {
+    featuredIndex = featuredIndex + 1;
+    if(featuredIndex >= 7){
+      featuredIndex = 0
+    }
+    showSlide(carouselId, featuredIndex);
+  }
+}
+
+function prevSlide(carouselId) {
+  if (carouselId === "special-carousel") {
+    specialIndex = specialIndex - 1;
+    if(specialIndex < 0){
+      specialIndex = 6
+    }
+    showSlide(carouselId, specialIndex);
+  } else if (carouselId === "featured-carousel") {
+    featuredIndex = featuredIndex - 1;
+    if(featuredIndex < 0){
+      featuredIndex = 6
+    }
+    showSlide(carouselId, featuredIndex);
+  }
+}
+
+function toggleCart(carouselId, index) {
+  const productId =
+    carouselId === "special-carousel"
+      ? specialProducts[index].name
+      : featuredProducts[index].name;
+  const productElement = document.getElementById(
+    `${carouselId}-product-${index}`
+  );
+  const addToCartBtn = productElement.querySelector(".add-to-cart");
+
+  if (cart[productId]) {
+    cart[productId]--;
+    if (cart[productId] === 0) {
+      delete cart[productId];
+    }
+    addToCartBtn.textContent = "Add to Cart";
+    addToCartBtn.classList.remove("remove-from-cart");
+  } else {
+    cart[productId] = 1;
+    addToCartBtn.textContent = "Remove from Cart";
+    addToCartBtn.classList.add("remove-from-cart");
+  }
+
+  cartCount = Object.values(cart).reduce(
+    (total, quantity) => total + quantity,
+    0
+  );
+  basketCount.textContent = cartCount;
+}
+
+initCarousel(specialCarousel, specialProducts, specialIndex);
+initCarousel(featuredCarousel, featuredProducts, featuredIndex);

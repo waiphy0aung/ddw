@@ -6,16 +6,15 @@
   margin: 30px auto;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
 .mySlides img {
   border-radius: 15px;
+  width: 100%;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
@@ -31,18 +30,15 @@
   user-select: none;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
 .mySlides .text {
   /* color: rgb(73, 51, 153); */
   color: white;
@@ -54,7 +50,20 @@
   text-align: center;
 }
 
-/* Number text (1/3 etc) */
+.mySlides .text-1 {
+  top: 20px;
+}
+
+.mySlides .text-2 {
+  top: 50px;
+  left: 0;
+  text-align: start;
+}
+
+.mySlides .text-3 {
+  top: 50%;
+}
+
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -63,7 +72,6 @@
   top: 0;
 }
 
-/* The dots/bullets/indicators */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -79,7 +87,6 @@
   background-color: #717171;
 }
 
-/* Fading animation */
 .fade {
   animation-name: fade;
   animation-duration: 1.5s;
@@ -100,102 +107,110 @@
     color: white;
 }
 
-/* Special Offers */
-#cCarousel {
-  position: relative;
-  max-width: 1200px;
-  margin: auto;
+.about-us h1{
+  margon-bottom: 20px
 }
 
-#cCarousel .arrow {
-  position: absolute;
-  top: 50%;
+.container {
   display: flex;
-  width: 45px;
-  height: 45px;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 10px 0px;
+  text-align: center;
+}
+
+.carousel-container {
+  max-width: 800px;
+  margin: 20px 0px;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product {
+  flex: 0 0 auto;
+  width: 180px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.product h3 {
+  color: #333;
+  margin-top: 10px;
+}
+
+.product p {
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.add-to-cart {
+  background-color: rgb(73, 51, 153);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-from-cart {
+  background-color: #d9534f;
+}
+
+.carousel-btn {
+  background-color: rgb(73, 51, 153);
+  color: #fff;
+  border: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  z-index: 1;
-  font-size: 26px;
-  color: white;
-  background: #00000072;
+  margin: 0px 15px;
   cursor: pointer;
+  font-size: 16px;
+  height: 35px;
+  width: 35px;
 }
 
-#cCarousel #prevSpecial, #cCarousel #prevFeatured {
-  left: 0px;
-}
-
-#cCarousel #nextSpecial, #cCarousel #nextFeatured {
-  right: 0px;
-}
-
-#carousel-vp-special, #carousel-vp-featured {
-  width: 1000px;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  margin: auto;
-}
-
-@media (max-width: 770px) {
-  #carousel-vp-special, #carousel-vp-featured {
-    width: 510px;
+@media only screen and (max-width: 600px) {
+  .slideshow-container {
+    margin: 10px;
   }
-}
 
-@media (max-width: 510px) {
-  #carousel-vp-special, #carousel-vp-featured {
-    width: 250px;
+  .carousel-container {
+    max-width: 90%;
+    overflow: auto;
   }
-}
 
-#cCarousel #cCarousel-inner-special, #cCarousel #cCarousel-inner-featured {
-  display: flex;
-  position: absolute;
-  transition: 0.3s ease-in-out;
-  gap: 10px;
-  left: 0px;
-}
+  .carousel-btn {
+    display: none;
+  }
 
-.cCarousel-item-special, .cCarousel-item-featured {
-  width: 250px;
-  height: 365px;
-  border: 2px solid white;
-  border-radius: 15px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-.cCarousel-item-special img, .cCarousel-item-featured img {
-  width: 100%;
-  object-fit: contain;
-  min-height: 246px;
-  color: white;
-}
-
-.cCarousel-item-special .infos, .cCarousel-item-featured .infos {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  background: white;
-  color: black;
-}
-
-.cCarousel-item-special .infos button, .cCarousel-item-featured .infos button {
-  background: #222;
-  padding: 10px 30px;
-  border-radius: 15px;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
+  .product {
+    width: 300px;
+    margin: 5px;
+  }
 }
 
 
