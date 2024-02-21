@@ -14,17 +14,26 @@
   <header class="navigation-header">
     <nav>
       <div class="logo-container">
-        <i class="fa-solid fa-mountain-sun"></i>
+        <img src="./images/logo.png" class="logo-img" alt="logo" >
         <a href="./index.html">SDC</a>
       </div>
       <div class="navigation-items" id="navigation-items">
         <a href="./index.html">Home</a>
-        <a href="./rising_desk.html">Rising Desks</a>
+        <div class="dropdown">
+          <a href="./rising_desk.html">Rising Desks</a>
+          <div class="dropdown-content">
+            <a href="./rising_desk.html">Pnematic Desks</a>
+            <a href="./rising_desk.html">Electric Desks</a>
+            <a href="./rising_desk.html">Bases</a>
+            <a href="./rising_desk.html">Work Benches</a>
+            <a href="./rising_desk.html">Seating</a>
+          </div>
+        </div>
         <a href="./health_benefits.html">Health Benefits</a>
         <a href="" class="active">Contact Us</a>
       </div>
       <div class="search-box">
-        <input placeholder="Search something..." />
+        <input placeholder="Search something..." >
       </div>
       <div class="basket">
         <i class="fa-solid fa-cart-shopping"></i>
@@ -59,7 +68,7 @@
   </section>
 
   <!-- Footer -->
-  <section id="footer">
+  <div id="footer">
     <footer class="footer">
       <div class="footer-content">
         <p>&copy; 2024 The Standing Desk Company (SDC)</p>
@@ -71,9 +80,9 @@
         </div>
       </div>
     </footer>
-  </section>
+  </div>
 
-</body>
 <script src="./script.js"></script>
+</body>
 
 </html>

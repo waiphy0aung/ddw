@@ -14,17 +14,26 @@
   <header class="navigation-header">
     <nav>
       <div class="logo-container">
-        <i class="fa-solid fa-mountain-sun"></i>
+        <img src="./images/logo.png" class="logo-img" alt="logo" >
         <a href="./index.html">SDC</a>
       </div>
       <div class="navigation-items" id="navigation-items">
         <a href="" class="active">Home</a>
-        <a href="./rising_desk.html">Rising Desks</a>
+        <div class="dropdown">
+          <a href="./rising_desk.html">Rising Desks</a>
+          <div class="dropdown-content">
+            <a href="./rising_desk.html">Pnematic Desks</a>
+            <a href="./rising_desk.html">Electric Desks</a>
+            <a href="./rising_desk.html">Bases</a>
+            <a href="./rising_desk.html">Work Benches</a>
+            <a href="./rising_desk.html">Seating</a>
+          </div>
+        </div>
         <a href="./health_benefits.html">Health Benefits</a>
         <a href="./contact_us.html">Contact Us</a>
       </div>
       <div class="search-box">
-        <input placeholder="Search something..." />
+        <input placeholder="Search something..." >
       </div>
       <div class="basket">
         <i class="fa-solid fa-cart-shopping"></i>
@@ -41,7 +50,7 @@
   <section class="slideshow-container">
 
     <div class="mySlides fade">
-      <img src="images/slide/slide1.jpg">
+      <img src="images/slide/slide1.jpg" alt="slide1">
       <div class="text text-1">
         <h1>Invest in Your Well-being and Say Goodbye to Sedentary Workdays</h1>
         <p>Explore our range of ergonomic standing desks crafted for comfort and functionality.</p>
@@ -49,7 +58,7 @@
     </div>
 
     <div class="mySlides fade">
-      <img src="images/slide/slide2.jpg">
+      <img src="images/slide/slide2.jpg" alt="slide2">
       <div class="text text-2">
         <h1>Experience a Healthier Lifestyle and Increased Productivity</h1>
         <p>Enjoy the benefits of improved posture, increased energy, and better focus. Elevate your workspace with us!
@@ -58,7 +67,7 @@
     </div>
 
     <div class="mySlides fade">
-      <img src="images/slide/slide3.jpg">
+      <img src="images/slide/slide3.jpg" alt="slide3">
       <div class="text text-3">
         <h1>Elevate Your Work, Elevate Your Health</h1>
         <p>From stylish designs to customizable options,
@@ -81,7 +90,7 @@
   </section>
 
   <section class="spacial-product">
-    <div class="carousel-title">Special Products</div>
+    <h2 class="carousel-title">Special Products</h2>
     <div class="container">
       <button class="carousel-btn" onclick="prevSlide('special-carousel')">❮</button>
       <div class="carousel-container">
@@ -94,7 +103,7 @@
   </section>
 
   <section class="featured-product">
-    <div class="carousel-title">Featured Products</div>
+    <h2 class="carousel-title">Featured Products</h2>
     <div class="container">
       <button class="carousel-btn" onclick="prevSlide('featured-carousel')">❮</button>
       <div class="carousel-container">
@@ -106,15 +115,15 @@
     </div>
   </section>
 
-  <section class="media-player">
+  <div class="media-player">
     <video controls poster="https://media.gettyimages.com/id/1449412149/photo/side-view-of-an-anonymous-businessman-using-laptop-computer-at-home.jpg?s=612x612&w=0&k=20&c=yYdij541FDcudPkrGAgS5BiNNo1ZHDoZPBBcQ0Gdeic=">
       <source src="./The-New-Recken-Standing-Desk-1.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-  </section>
+  </div>
 
   <!-- Footer -->
-  <section id="footer">
+  <div id="footer">
     <footer class="footer">
       <div class="footer-content">
         <p>&copy; 2024 The Standing Desk Company (SDC)</p>
@@ -126,7 +135,7 @@
         </div>
       </div>
     </footer>
-  </section>
+  </div>
 
   <div id="myModal" class="modal">
     <div class="modal-content">
@@ -135,8 +144,9 @@
     </div>
   </div>
 
-</body>
 <script src="./script.js"></script>
 <script src="./home.js"></script>
+</body>
+
 
 </html>

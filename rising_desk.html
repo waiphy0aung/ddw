@@ -14,17 +14,26 @@
   <header class="navigation-header">
     <nav>
       <div class="logo-container">
-        <i class="fa-solid fa-mountain-sun"></i>
+        <img src="./images/logo.png" class="logo-img" alt="logo" >
         <a href="./index.html">SDC</a>
       </div>
       <div class="navigation-items" id="navigation-items">
         <a href="./index.html">Home</a>
-        <a href="" class="active">Rising Desks</a>
+        <div class="dropdown">
+          <a href="" class="active">Rising Desks</a>
+          <div class="dropdown-content">
+            <a href="./rising_desk.html">Pnematic Desks</a>
+            <a href="./rising_desk.html">Electric Desks</a>
+            <a href="./rising_desk.html">Bases</a>
+            <a href="./rising_desk.html">Work Benches</a>
+            <a href="./rising_desk.html">Seating</a>
+          </div>
+        </div>
         <a href="./health_benefits.html">Health Benefits</a>
         <a href="./contact_us.html">Contact Us</a>
       </div>
       <div class="search-box">
-        <input placeholder="Search something..." />
+        <input placeholder="Search something..." >
       </div>
       <div class="basket">
         <i class="fa-solid fa-cart-shopping"></i>
@@ -38,12 +47,12 @@
   </header>
 
   <div class="category-container">
-    <button class="category-btn" onclick="displayProducts('all')">All</button>
-    <button class="category-btn" onclick="displayProducts('pneumatic')">Pneumatic Desks</button>
-    <button class="category-btn" onclick="displayProducts('electric')">Electric Desks</button>
-    <button class="category-btn" onclick="displayProducts('base')">Bases</button>
-    <button class="category-btn" onclick="displayProducts('bench')">Work Benches</button>
-    <button class="category-btn" onclick="displayProducts('seat')">Seating</button>
+    <button class="category-btn" id="all-category" onclick="displayProducts('all')">All</button>
+    <button class="category-btn" id="pneumatic-category" onclick="displayProducts('pneumatic')">Pneumatic Desks</button>
+    <button class="category-btn" id="electric-category" onclick="displayProducts('electric')">Electric Desks</button>
+    <button class="category-btn" id="base-category" onclick="displayProducts('base')">Bases</button>
+    <button class="category-btn" id="bench-category" onclick="displayProducts('bench')">Work Benches</button>
+    <button class="category-btn" id="seat-category" onclick="displayProducts('seat')">Seating</button>
     <!-- Add more category buttons as needed -->
   </div>
 
@@ -56,11 +65,11 @@
   <div class="modal" id="modal">
     <div class="modal-content">
       <div class="modal-header">
-        <h2 id="modal-title"></h2>
+        <h2 id="modal-title">""</h2>
         <span class="close-btn" onclick="closeModal()">&times;</span>
       </div>
       <div class="modal-image-container">
-        <img id="modal-image" alt="">
+        <img src="modal-image.png" id="modal-image" alt="modal-img">
       </div>
       <p id="modal-description"></p>
       <p id="modal-price"></p>
@@ -69,7 +78,7 @@
   
 
   <!-- Footer -->
-  <section id="footer">
+  <div id="footer">
     <footer class="footer">
       <div class="footer-content">
         <p>&copy; 2024 The Standing Desk Company (SDC)</p>
@@ -81,10 +90,10 @@
         </div>
       </div>
     </footer>
-  </section>
+  </div>
 
-</body>
 <script src="./script.js"></script>
 <script src="./rising_desk.js"></script>
+</body>
 
 </html>

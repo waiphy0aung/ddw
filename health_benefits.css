@@ -3,6 +3,7 @@
     margin: 30px auto;
     padding: 20px;
     border-radius: 10px;
+    background-color: white;
 }
 
 .health-benefits h2 {
@@ -11,9 +12,15 @@
     margin-bottom: 30px;
 }
 
-.health-benefits iframe {
+.video {
+  display: flex;
+  justify-content: center;
+}
+
+.video iframe {
   width: 600px;
   height: 355px;
+  frameborder: 0;
 }
 
 .health-benefits p {
@@ -25,9 +32,6 @@
 .health-benefits ul {
     list-style-type: none;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .health-benefits h3 {
@@ -40,7 +44,7 @@
     margin: 0px auto;
   }
 
-  .health-benefits iframe {
+  .video iframe {
     width: 400px;
     height: 255px;
   }

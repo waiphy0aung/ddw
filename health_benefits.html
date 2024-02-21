@@ -14,17 +14,26 @@
   <header class="navigation-header">
     <nav>
       <div class="logo-container">
-        <i class="fa-solid fa-mountain-sun"></i>
+        <img src="./images/logo.png" class="logo-img" alt="logo">
         <a href="./index.html">SDC</a>
       </div>
       <div class="navigation-items" id="navigation-items">
         <a href="./index.html">Home</a>
-        <a href="./rising_desk.html">Rising Desks</a>
+        <div class="dropdown">
+          <a href="./rising_desk.html">Rising Desks</a>
+          <div class="dropdown-content">
+            <a href="./rising_desk.html">Pnematic Desks</a>
+            <a href="./rising_desk.html">Electric Desks</a>
+            <a href="./rising_desk.html">Bases</a>
+            <a href="./rising_desk.html">Work Benches</a>
+            <a href="./rising_desk.html">Seating</a>
+          </div>
+        </div>
         <a href="" class="active">Health Benefits</a>
         <a href="./contact_us.html">Contact Us</a>
       </div>
       <div class="search-box">
-        <input placeholder="Search something..." />
+        <input placeholder="Search something...">
       </div>
       <div class="basket">
         <i class="fa-solid fa-cart-shopping"></i>
@@ -78,10 +87,13 @@
         <p>Standing desks can alleviate back and neck pain associated with prolonged sitting, providing relief to
           individuals with musculoskeletal discomfort.</p>
       </li>
+    </ul>
+    <div class="video">
       <iframe src="https://www.youtube.com/embed/QqDMOwVacww?si=T0a3JyQi6ymG3FVC" title="YouTube video player"
-        frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen></iframe>
+    </div>
+    <ul>
       <li>
         <h3>Increased Caloric Expenditure</h3>
         <p>Standing burns more calories than sitting, contributing to overall caloric expenditure and potentially aiding
@@ -102,7 +114,7 @@
   </section>
 
   <!-- Footer -->
-  <section id="footer">
+  <div id="footer">
     <footer class="footer">
       <div class="footer-content">
         <p>&copy; 2024 The Standing Desk Company (SDC)</p>
@@ -114,9 +126,9 @@
         </div>
       </div>
     </footer>
-  </section>
+  </div>
 
+  <script src="./script.js"></script>
 </body>
-<script src="./script.js"></script>
 
 </html>

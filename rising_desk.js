@@ -112,7 +112,7 @@ const products = [
   },
   {
     name: "Lightning",
-    price: 795.00,
+    price: 795.0,
     image: "images/bench/bench2.png",
     description: "Height-Adjustable Tool Stand",
     category: "bench",
@@ -135,14 +135,16 @@ const products = [
     name: "Prima Sella",
     price: 575.0,
     image: "images/seat/seat1.jpg",
-    description: "Premium, heavy built executive task chair for superior comfort",
+    description:
+      "Premium, heavy built executive task chair for superior comfort",
     category: "seat",
   },
   {
     name: "Alta Sella",
     price: 550.0,
     image: "images/seat/seat2.jpg",
-    description: "Versatile task chair for standing desks and collaborative spaces",
+    description:
+      "Versatile task chair for standing desks and collaborative spaces",
     category: "seat",
   },
   {
@@ -182,13 +184,19 @@ function displayProducts(category) {
         <h3>${product.name}</h3>
         <p>$${product.price.toFixed(2)}</p>
         <button class="add-to-cart-btn" onclick="toggleCart('${
-          product.category
+          category
         }', ${index})">Add to Cart</button>
       </div>
     `;
 
     container.innerHTML += productHTML;
   });
+
+  const activeBtn = document.querySelector(".active-category");
+  if (activeBtn) activeBtn.classList.remove("active-category");
+  document
+    .getElementById(category + "-category")
+    .classList.add("active-category");
 }
 
 function openModal(index, category) {
@@ -224,30 +232,26 @@ window.onclick = function (event) {
   }
 };
 
-function addToCart(index) {
-  alert(`Added ${products[index].name} to cart!`);
-}
-
 const basketCount = document.getElementById("basket-count");
 let cartCount = 0;
 const cart = {};
 
 function toggleCart(category, index) {
-  const productId = products.filter((p) => p.category === category)[index].name;
+  const product = category === "all" ? products[index] : products.filter((p) => p.category === category)[index];
   const productElement = document.getElementById(
-    `${category}-product-${index}`
+    `${product.category}-product-${index}`
   );
   const addToCartBtn = productElement.querySelector(".add-to-cart-btn");
 
-  if (cart[productId]) {
-    cart[productId]--;
-    if (cart[productId] === 0) {
-      delete cart[productId];
+  if (cart[product.name]) {
+    cart[product.name]--;
+    if (cart[product.name] === 0) {
+      delete cart[product.name];
     }
     addToCartBtn.textContent = "Add to Cart";
     addToCartBtn.classList.remove("remove-from-cart");
   } else {
-    cart[productId] = 1;
+    cart[product.name] = 1;
     addToCartBtn.textContent = "Remove from Cart";
     addToCartBtn.classList.add("remove-from-cart");
   }
