@@ -1,0 +1,47 @@
+.health-benefits {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.health-benefits h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.health-benefits iframe {
+  width: 600px;
+  height: 355px;
+}
+
+.health-benefits p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.health-benefits ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.health-benefits h3 {
+    color: #333;
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 600px) {
+  .health-benefits {
+    margin: 0px auto;
+  }
+
+  .health-benefits iframe {
+    width: 400px;
+    height: 255px;
+  }
+}

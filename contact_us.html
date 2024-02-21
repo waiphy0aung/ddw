@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./contact_us.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Retail Camping Company</title>
+</head>
+
+<body>
+  <header class="navigation-header">
+    <nav>
+      <div class="logo-container">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <a href="./index.html">SDC</a>
+      </div>
+      <div class="navigation-items" id="navigation-items">
+        <a href="./index.html">Home</a>
+        <a href="./rising_desk.html">Rising Desks</a>
+        <a href="./health_benefits.html">Health Benefits</a>
+        <a href="" class="active">Contact Us</a>
+      </div>
+      <div class="search-box">
+        <input placeholder="Search something..." />
+      </div>
+      <div class="basket">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="basket-count">0</span>
+      </div>
+      <div class="menu-bar">
+        <span id="openMen">&#9776;</span>
+        <span id="closeMen">&#x2716;</span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="contact-container">
+    <div class="add-contact-form">
+      <h2>Contact Us</h2>
+      <form class="contactForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <section id="footer">
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 The Standing Desk Company (SDC)</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+</body>
+<script src="./script.js"></script>
+
+</html>

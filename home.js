@@ -30,167 +30,105 @@ function showSlides(n) {
 
 const specialProducts = [
   {
-    name: "Venture Pro",
-    price: 129.99,
-    image: "images/backpack/backpack1.jpg",
+    name: "The Klöud",
+    price: 1149.0,
+    image: "images/pneumatic/pneumatic1.jpg",
     description:
-      "A versatile and durable backpack for all your camping adventures.",
-    category: "backpacks",
+      "The #1 power-free weight adjustable standing desk. Up to 150lbs",
+    category: "pneumatic",
   },
   {
-    name: "Trailblazer XT",
-    price: 89.95,
-    image: "images/backpack/backpack2.jpg",
+    name: "The Nimbus",
+    price: 999.0,
+    image: "images/pneumatic/pneumatic2.jpg",
     description:
-      "Compact and lightweight backpack, perfect for day hikes and short trips.",
-    category: "backpacks",
+      "Power-free counterbalanced standing desk made for multi-monitor setups",
+    category: "pneumatic",
   },
   {
-    name: "Summit Peak 4-Person Tent",
-    price: 249.99,
-    image: "images/tent/tent1.jpg",
-    description:
-      "Spacious and durable 4-person tent, perfect for family camping trips.",
-    category: "tents",
+    name: "The Ändern Electric",
+    price: 749.0,
+    image: "images/electric/electric1.jpg",
+    description: "Light and airy design + powerful electric performance",
+    category: "electric",
   },
   {
-    name: "Trailblazer Solo Backpacking Tent",
-    price: 129.95,
-    image: "images/tent/tent2.jpg",
-    description:
-      "Lightweight and compact solo tent for backpackers seeking minimalist shelter.",
-    category: "tents",
+    name: "The Oben",
+    price: 649.0,
+    image: "images/electric/electric2.png",
+    description: "The best all-round electric desk on the market today",
+    category: "electric",
   },
   {
-    name: "Trail Chef Cooking Set",
-    price: 59.99,
-    image: "images/cookware/cookware1.jpg",
+    name: "Klöud Base",
+    price: 949.0,
+    image: "images/base/base1.jpg",
     description:
-      "Compact and lightweight cooking set for basic camping meals, perfect for solo adventurers.",
-    category: "cookware",
+      "The most advanced power-free, height adjustable desk base ever",
+    category: "base",
   },
   {
-    name: "Gourmet Explorer Cookware Kit",
-    price: 129.95,
-    image: "images/cookware/cookware2.jpg",
-    description:
-      "Versatile cookware kit with pots, pans, and utensils for a variety of camping culinary experiences.",
-    category: "cookware",
+    name: "Speedbench™ Storm",
+    price: 1195.0,
+    image: "images/bench/bench1.png",
+    description: "Ergonomic Automotive Work System",
+    category: "bench",
   },
   {
-    name: "Multi-Tool Adventure Kit",
-    price: 39.99,
-    image: "images/tools/tool1.jpg",
+    name: "Prima Sella",
+    price: 575.0,
+    image: "images/seat/seat1.jpg",
     description:
-      "Versatile multi-tool with various functions, including a knife, pliers, screwdrivers, and more.",
-    category: "tools",
-  },
-  {
-    name: "Compact Folding Shovel",
-    price: 29.95,
-    image: "images/tools/tool2.jpg",
-    description:
-      "Portable and durable folding shovel, perfect for digging fire pits, trenches, and other outdoor tasks.",
-    category: "tools",
-  },
-  {
-    name: "Portable Camping Chair",
-    price: 29.99,
-    image: "images/furniture/furniture1.jpg",
-    description:
-      "Comfortable and lightweight chair for relaxing around the campfire or at the campsite.",
-    category: "furniture",
-  },
-  {
-    name: "Foldable Camping Table",
-    price: 49.95,
-    image: "images/furniture/furniture2.jpg",
-    description:
-      "Compact and sturdy camping table for dining, cooking, or playing games at the campsite.",
-    category: "furniture",
+      "Premium, heavy built executive task chair for superior comfort",
+    category: "seat",
   },
 ];
 
 const featuredProducts = [
   {
-    name: "Alpine Adventure",
-    price: 199.99,
-    image: "images/backpack/backpack5.jpg",
-    description:
-      "High-performance backpack designed for alpine conditions, built to withstand harsh weather.",
-    category: "backpacks",
+    name: "The Lüften",
+    price: 849.0,
+    image: "images/pneumatic/pneumatic3.jpg",
+    description: "Roomy desktop and 2-column pneumatic lift of larg monitors",
+    category: "pneumatic",
   },
   {
-    name: "Explorer Elite",
-    price: 119.95,
-    image: "images/backpack/backpack6.jpg",
+    name: "The Ändern",
+    price: 699.0,
+    image: "images/pneumatic/pneumatic4.png",
     description:
-      "An all-purpose backpack with multiple compartments for organized storage during your outdoor explorations.",
-    category: "backpacks",
+      "Flexible pneumatic standing desk for laptop and single monitor users",
+    category: "pneumatic",
   },
   {
-    name: "Alpine Summit 2-Person Tent",
-    price: 189.99,
-    image: "images/tent/tent5.jpg",
-    description:
-      "High-altitude tent for two, designed to withstand the challenges of alpine environments.",
-    category: "tents",
+    name: "The Recken",
+    price: 799.0,
+    image: "images/electric/electric3.jpg",
+    description: "New for 2023: The better option than the fully Jarvis.",
+    category: "electric",
   },
   {
-    name: "Family Oasis 8-Person Tent",
-    price: 599.95,
-    image: "images/tent/tent6.jpg",
+    name: "Recken Base",
+    price: 599.0,
+    image: "images/base/base2.jpg",
     description:
-      "Spacious family tent with multiple rooms and a large common area, perfect for group camping.",
-    category: "tents",
+      "New for 2023: Rectangular, 3 stage, full featured motorized desk",
+    category: "base",
   },
   {
-    name: "Premium Camping Cookware Set",
-    price: 149.99,
-    image: "images/cookware/cookware5.jpg",
-    description:
-      "High-quality cookware set with non-stick surfaces and heat-resistant handles for a gourmet camping experience.",
-    category: "cookware",
+    name: "Lightning",
+    price: 795.0,
+    image: "images/bench/bench2.png",
+    description: "Height-Adjustable Tool Stand",
+    category: "bench",
   },
   {
-    name: "Ultimate Outdoor Cooking Bundle",
-    price: 249.95,
-    image: "images/cookware/cookware6.jpg",
+    name: "Alta Sella",
+    price: 550.0,
+    image: "images/seat/seat2.jpg",
     description:
-      "Comprehensive cooking bundle with pots, pans, utensils, and a portable stove for all your outdoor cooking needs.",
-    category: "cookware",
-  },
-  {
-    name: "Wireless Portable Power Station",
-    price: 129.99,
-    image: "images/tools/tool5.jpg",
-    description:
-      "Compact and powerful portable power station to charge devices and power small appliances while camping.",
-    category: "tools",
-  },
-  {
-    name: "Compact Binoculars for Outdoor Exploration",
-    price: 69.95,
-    image: "images/tools/tool6.jpg",
-    description:
-      "High-quality binoculars with a compact design, perfect for observing wildlife and scenic views during camping.",
-    category: "tools",
-  },
-  {
-    name: "Hanging Hammock Chair",
-    price: 59.99,
-    image: "images/furniture/furniture5.jpg",
-    description:
-      "Relaxing and portable hanging hammock chair for lounging in nature.",
-    category: "furniture",
-  },
-  {
-    name: "Metolius Crash Pad Couch",
-    price: 129.95,
-    image: "images/furniture/furniture6.jpg",
-    description:
-      "the best way to turn any standard-size pad into a couch! Works great for the camp site, or as dirtbag furniture.",
-    category: "furniture",
+      "Versatile task chair for standing desks and collaborative spaces",
+    category: "seat",
   },
 ];
 
@@ -233,15 +171,15 @@ function showSlide(carouselId, index) {
 
 function nextSlide(carouselId) {
   if (carouselId === "special-carousel") {
-    specialIndex =specialIndex + 1;
-    if(specialIndex >= 7){
-      specialIndex = 0
+    specialIndex = specialIndex + 1;
+    if (specialIndex >= 4) {
+      specialIndex = 0;
     }
     showSlide(carouselId, specialIndex);
   } else if (carouselId === "featured-carousel") {
     featuredIndex = featuredIndex + 1;
-    if(featuredIndex >= 7){
-      featuredIndex = 0
+    if (featuredIndex >= 3) {
+      featuredIndex = 0;
     }
     showSlide(carouselId, featuredIndex);
   }
@@ -250,14 +188,14 @@ function nextSlide(carouselId) {
 function prevSlide(carouselId) {
   if (carouselId === "special-carousel") {
     specialIndex = specialIndex - 1;
-    if(specialIndex < 0){
-      specialIndex = 6
+    if (specialIndex < 0) {
+      specialIndex = 3;
     }
     showSlide(carouselId, specialIndex);
   } else if (carouselId === "featured-carousel") {
     featuredIndex = featuredIndex - 1;
-    if(featuredIndex < 0){
-      featuredIndex = 6
+    if (featuredIndex < 0) {
+      featuredIndex = 2;
     }
     showSlide(carouselId, featuredIndex);
   }
@@ -295,3 +233,21 @@ function toggleCart(carouselId, index) {
 
 initCarousel(specialCarousel, specialProducts, specialIndex);
 initCarousel(featuredCarousel, featuredProducts, featuredIndex);
+
+let modal = document.getElementById("myModal");
+
+let span = document.getElementsByClassName("close")[0];
+
+setTimeout(function () {
+  modal.style.display = "block";
+}, 2000);
+
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};

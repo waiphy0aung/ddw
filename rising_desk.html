@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="stylesheet" type="text/css" href="./rising_desk.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Retail Camping Company</title>
+</head>
+
+<body>
+  <header class="navigation-header">
+    <nav>
+      <div class="logo-container">
+        <i class="fa-solid fa-mountain-sun"></i>
+        <a href="./index.html">SDC</a>
+      </div>
+      <div class="navigation-items" id="navigation-items">
+        <a href="./index.html">Home</a>
+        <a href="" class="active">Rising Desks</a>
+        <a href="./health_benefits.html">Health Benefits</a>
+        <a href="./contact_us.html">Contact Us</a>
+      </div>
+      <div class="search-box">
+        <input placeholder="Search something..." />
+      </div>
+      <div class="basket">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="basket-count">0</span>
+      </div>
+      <div class="menu-bar">
+        <span id="openMen">&#9776;</span>
+        <span id="closeMen">&#x2716;</span>
+      </div>
+    </nav>
+  </header>
+
+  <div class="category-container">
+    <button class="category-btn" onclick="displayProducts('all')">All</button>
+    <button class="category-btn" onclick="displayProducts('pneumatic')">Pneumatic Desks</button>
+    <button class="category-btn" onclick="displayProducts('electric')">Electric Desks</button>
+    <button class="category-btn" onclick="displayProducts('base')">Bases</button>
+    <button class="category-btn" onclick="displayProducts('bench')">Work Benches</button>
+    <button class="category-btn" onclick="displayProducts('seat')">Seating</button>
+    <!-- Add more category buttons as needed -->
+  </div>
+
+  <div class="container">
+    <div class="product-container" id="product-container">
+
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 id="modal-title"></h2>
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+      </div>
+      <div class="modal-image-container">
+        <img id="modal-image" alt="">
+      </div>
+      <p id="modal-description"></p>
+      <p id="modal-price"></p>
+    </div>
+  </div>
+  
+
+  <!-- Footer -->
+  <section id="footer">
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2024 The Standing Desk Company (SDC)</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+          <a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </footer>
+  </section>
+
+</body>
+<script src="./script.js"></script>
+<script src="./rising_desk.js"></script>
+
+</html>
